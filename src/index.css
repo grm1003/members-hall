@@ -1,5 +1,6 @@
 @import "@radix-ui/colors/blue-dark.css";
 @import "@radix-ui/colors/blue.css";
+@import "@radix-ui/colors/gray.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -26,6 +27,7 @@
     --input: var(--blue-3);
     --ring: var(--blue-9);
     --radius: 0.5rem;
+    --item: var(--gray-11);
   }
 
   .dark {
@@ -48,6 +50,7 @@
     --border: var(--blue-dark-5);
     --input: var(--blue-dark-3);
     --ring: var(--blue-dark-9);
+    --item: var(--gray-12);
   }
 }
 

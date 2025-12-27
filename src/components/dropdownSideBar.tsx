@@ -1,27 +1,36 @@
-import { Button, DropdownMenu } from "@radix-ui/themes";
+import { Button, DropdownMenu, Flex } from "@radix-ui/themes";
+import { Link } from "react-router-dom";
+import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 
 export function DropdownSideBar() {
   return (
-          <DropdownMenu.Root>
-            <DropdownMenu.Trigger>
-              <Button variant="solid">
-                <DropdownMenu.TriggerIcon />
-              </Button>
-            </DropdownMenu.Trigger>
-            <DropdownMenu.Content>
-              <DropdownMenu.Item shortcut="⌘ E">Edit</DropdownMenu.Item>
+    <Flex align="center">
+      <DropdownMenu.Root>
+        <DropdownMenu.Trigger>
+          <Button variant="soft" size="1">
+            <HamburgerMenuIcon width={15} height={15} />
+          </Button>
+        </DropdownMenu.Trigger>
+        <DropdownMenu.Content size="1">
+          <DropdownMenu.Item className="bg-[var(--item)] rounded-t-xl p-0">
+            <Link
+              to="/"
+              className="block w-full h-full px-4 py-2 text-[var(--primary-foreground)] font-semibold"
+            >
+              Home
+            </Link>
+          </DropdownMenu.Item>
 
-              <DropdownMenu.Sub>
-                <DropdownMenu.SubTrigger>More</DropdownMenu.SubTrigger>
-                <DropdownMenu.SubContent>
-                  <DropdownMenu.Item>Move to project…</DropdownMenu.Item>
-                  <DropdownMenu.Item>Move to folder…</DropdownMenu.Item>
-
-                  <DropdownMenu.Separator />
-                  <DropdownMenu.Item>Advanced options…</DropdownMenu.Item>
-                </DropdownMenu.SubContent>
-              </DropdownMenu.Sub>
-            </DropdownMenu.Content>
-          </DropdownMenu.Root>
-  )
+          <DropdownMenu.Item className="bg-[var(--item)] rounded-b-xl p-0">
+            <Link
+              to="/"
+              className="block w-full h-full px-4 py-2 text-[var(--primary-foreground)] font-semibold"
+            >
+              Teste
+            </Link>
+          </DropdownMenu.Item>
+        </DropdownMenu.Content>
+      </DropdownMenu.Root>
+    </Flex>
+  );
 }
