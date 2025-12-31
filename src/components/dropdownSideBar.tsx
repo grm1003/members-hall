@@ -21,12 +21,22 @@ export function DropdownSideBar() {
             </Link>
           </DropdownMenu.Item>
 
-          <DropdownMenu.Item className="bg-[var(--item)] rounded-b-xl p-0">
+          <DropdownMenu.Item className="bg-[var(--item)] p-0">
             <Link
-              to="/"
+              to="/excluir"
               className="block w-full h-full px-4 py-2 text-[var(--primary-foreground)] font-semibold"
             >
-              Teste
+              Excluir Membro
+            </Link>
+          </DropdownMenu.Item>
+          
+
+          <DropdownMenu.Item className="bg-[var(--item)] rounded-b-xl p-0">
+            <Link
+              to="/cadastrar"
+              className="block w-full h-full px-4 py-2 text-[var(--primary-foreground)] font-semibold"
+            >
+              Cadastrar Membro
             </Link>
           </DropdownMenu.Item>
         </DropdownMenu.Content>
